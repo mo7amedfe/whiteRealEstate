@@ -53,7 +53,7 @@ btn_go.addEventListener('click', function () {
                     <td>${down_payment}</td>
                     <td>${interestSystem}</td>
                     <td>${installment_years}</td>
-                    <td>${monthly_installment}</td>
+                    <td>${Math.ceil(monthly_installment)}</td>
 
             </tr>`  
      table.innerHTML = cartona;
