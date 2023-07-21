@@ -46,14 +46,14 @@ btn_go.addEventListener('click', function () {
     down_payment = price * down_payment_percentage;
      The_remaining_amount = price - down_payment;
 
-     monthly_installment = (((The_remaining_amount * (interest / 100)) * installment_years) + The_remaining_amount) / (installment_years * 12)
+     monthly_installment = Math.ceil((((The_remaining_amount * (interest / 100)) * installment_years) + The_remaining_amount) / (installment_years * 12))
 
 
  cartona = `<tr>
                     <td>${down_payment}</td>
                     <td>${interestSystem}</td>
                     <td>${installment_years}</td>
-                    <td>${Math.ceil(monthly_installment)}</td>
+                    <td>${monthly_installment}</td>
 
             </tr>`  
      table.innerHTML = cartona;
