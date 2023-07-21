@@ -9,8 +9,13 @@ let installment_years = 0
 let table = document.getElementById('table-1')
 let interestSystem = 0
 let cartona =``;
+let down_payment=0
+let The_remaining_amount=0
+let monthly_installment =0
 // console.log(table);
 btn_go.addEventListener('click', function () {
+    cartona=``;
+    table = document.getElementById('table-1')
     let price = Number(priceINP.value)
     let age = Number(ageINP.value)
 
@@ -38,10 +43,10 @@ btn_go.addEventListener('click', function () {
         installment_years = 60 - age;
     }
 
-    let down_payment = price * down_payment_percentage;
-    let The_remaining_amount = price - down_payment;
+    down_payment = price * down_payment_percentage;
+     The_remaining_amount = price - down_payment;
 
-    let monthly_installment = (((The_remaining_amount * (interest / 100)) * installment_years) + The_remaining_amount) / (installment_years * 12)
+     monthly_installment = (((The_remaining_amount * (interest / 100)) * installment_years) + The_remaining_amount) / (installment_years * 12)
 
 
  cartona = `
@@ -49,16 +54,16 @@ btn_go.addEventListener('click', function () {
         <table class="table table-primary">
             <thead>
                 <tr>
-                    <th scope="col">Down Payment</th>
-                    <th scope="col"> Interest System </th>
-                    <th scope="col">installment years</th>
-                    <th scope="col">Monthly installment</th>
+                    <th>Down Payment</th>
+                    <th> Interest System </th>
+                    <th>installment years</th>
+                    <th>Monthly installment</th>
 
                 </tr>
             </thead>
             <tbody>
                 <tr class="">
-                    <td scope="row">${down_payment}</td>
+                    <td>${down_payment}</td>
                     <td>${interestSystem}</td>
                     <td>${installment_years}</td>
                     <td>${monthly_installment}</td>
