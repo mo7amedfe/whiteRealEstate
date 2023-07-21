@@ -49,17 +49,12 @@ btn_go.addEventListener('click', function () {
      monthly_installment = (((The_remaining_amount * (interest / 100)) * installment_years) + The_remaining_amount) / (installment_years * 12)
 
 
- cartona = `
-    
-                <tr class="">
+ cartona = `<tr>
                     <td>${down_payment}</td>
                     <td>${interestSystem}</td>
                     <td>${installment_years}</td>
                     <td>${monthly_installment}</td>
 
-                </tr>
-                
-            `
-
-    table.innerHTML = cartona;
+            </tr>`  
+     table.innerHTML = cartona;
 })
