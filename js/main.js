@@ -61,5 +61,5 @@ btn_go.addEventListener('click', function () {
                 
             `
 
-    table.innerHTML += cartona;
+    table.innerHTML = cartona;
 })
