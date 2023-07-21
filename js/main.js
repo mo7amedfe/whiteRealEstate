@@ -50,18 +50,7 @@ btn_go.addEventListener('click', function () {
 
 
  cartona = `
-    <div class="table-responsive">
-        <table class="table table-primary">
-            <thead>
-                <tr>
-                    <th>Down Payment</th>
-                    <th> Interest System </th>
-                    <th>installment years</th>
-                    <th>Monthly installment</th>
-
-                </tr>
-            </thead>
-            <tbody>
+    
                 <tr class="">
                     <td>${down_payment}</td>
                     <td>${interestSystem}</td>
@@ -70,9 +59,7 @@ btn_go.addEventListener('click', function () {
 
                 </tr>
                 
-            </tbody>
-        </table>`
-
+            `
 
     table.innerHTML += cartona;
 })
