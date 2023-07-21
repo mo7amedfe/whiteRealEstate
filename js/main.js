@@ -1,7 +1,7 @@
 let priceINP = document.getElementById('price');
 let ageINP = document.getElementById('age');
 let btn_go = document.getElementById('btn-go')
-
+let tableDisplay =document.getElementById('tableDisplay')
 let interest = 0
 let down_payment_percentage = 0
 let installment_years = 0
@@ -57,4 +57,5 @@ btn_go.addEventListener('click', function () {
 
             </tr>`  
      table.innerHTML = cartona;
+    tableDisplay.classList.remove("d-none");
 })
